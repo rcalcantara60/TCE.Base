@@ -1,0 +1,22 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>TCE.DomainLayerBase</id>
+    <version>2.1.0</version>
+    <title>$title$</title>
+    <authors>Rodrigo Alcântara</authors>
+    <owners>TCE MG</owners>    
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Compomentes base dos serviços de dominio</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags></tags>
+    <dependencies>
+      <dependency id="TCE.CrossCutting.Dto" version="2.1.0"/>
+      <dependency id="TCE.Repository" version="2.1.0"/>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\bin\Release\TCE.DomainLayerBase.dll" target="lib\net462"/>    
+  </files>
+</package>

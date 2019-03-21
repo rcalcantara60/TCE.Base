@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net47</TargetFramework>
+    <PreserveCompilationContext>true</PreserveCompilationContext>
+    <AssemblyName>TCE.Web.Api</AssemblyName>
+    <OutputType>Library</OutputType>
+    <PackageId>TCE.Web.Api</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Update="wwwroot;web.config">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="1.1.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Server.IISIntegration" Version="1.1.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" Version="1.1.3" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="1.1.2" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net462' ">
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="TCE.AppLayerBase">
+      <HintPath>..\..\..\App\TCE.AppLayerBase\bin\Debug\TCE.AppLayerBase.dll</HintPath>
+    </Reference>
+    <Reference Include="TCE.CrossCutting.Dto">
+      <HintPath>..\..\..\CrossCutting\TCE.CrossCutting\bin\Debug\TCE.CrossCutting.Dto.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

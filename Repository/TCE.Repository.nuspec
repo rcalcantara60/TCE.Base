@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>TCE.Repository</id>
+    <version>2.1.0</version>
+    <title>TCE Repository</title>
+    <authors>Rodrigo Costa</authors>
+    <owners>TCE</owners>
+    
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Classes e interfaces base para acesso à dados com ORM.</description>    
+    <copyright>Copyright 2017</copyright>    
+  </metadata>
+  <files>
+    <file src="bin\Release\TCE.Repository.dll" target="lib" />    
+  </files>
+</package>
