@@ -1,25 +1,13 @@
-C:\Users\Rodrigo\source\repos\BASE TCE\Repository\bin\Debug\TCE.Repository.dll.config
-C:\Users\Rodrigo\source\repos\BASE TCE\Repository\bin\Debug\TCE.Repository.dll
-C:\Users\Rodrigo\source\repos\BASE TCE\Repository\bin\Debug\TCE.Repository.pdb
-C:\Users\Rodrigo\source\repos\BASE TCE\Repository\bin\Debug\Dapper.dll
-C:\Users\Rodrigo\source\repos\BASE TCE\Repository\bin\Debug\EntityFramework.dll
-C:\Users\Rodrigo\source\repos\BASE TCE\Repository\bin\Debug\Oracle.ManagedDataAccess.dll
-C:\Users\Rodrigo\source\repos\BASE TCE\Repository\bin\Debug\Dapper.xml
-C:\Users\Rodrigo\source\repos\BASE TCE\Repository\bin\Debug\EntityFramework.xml
-C:\Users\Rodrigo\source\repos\BASE TCE\Repository\obj\Debug\TCE.Repository.csprojAssemblyReference.cache
-C:\Users\Rodrigo\source\repos\BASE TCE\Repository\obj\Debug\TCE.Repository.csproj.CoreCompileInputs.cache
-C:\Users\Rodrigo\source\repos\BASE TCE\Repository\obj\Debug\TCE.Repository.csproj.CopyComplete
-C:\Users\Rodrigo\source\repos\BASE TCE\Repository\obj\Debug\TCE.Repository.dll
-C:\Users\Rodrigo\source\repos\BASE TCE\Repository\obj\Debug\TCE.Repository.pdb
-C:\Users\Rodrigo\source\repos\TCE.Base\Repository\bin\Debug\TCE.Repository.dll.config
-C:\Users\Rodrigo\source\repos\TCE.Base\Repository\bin\Debug\TCE.Repository.dll
-C:\Users\Rodrigo\source\repos\TCE.Base\Repository\bin\Debug\TCE.Repository.pdb
-C:\Users\Rodrigo\source\repos\TCE.Base\Repository\bin\Debug\Dapper.dll
-C:\Users\Rodrigo\source\repos\TCE.Base\Repository\bin\Debug\EntityFramework.dll
-C:\Users\Rodrigo\source\repos\TCE.Base\Repository\bin\Debug\Dapper.xml
-C:\Users\Rodrigo\source\repos\TCE.Base\Repository\bin\Debug\EntityFramework.xml
-C:\Users\Rodrigo\source\repos\TCE.Base\Repository\obj\Debug\TCE.Repository.csprojAssemblyReference.cache
-C:\Users\Rodrigo\source\repos\TCE.Base\Repository\obj\Debug\TCE.Repository.csproj.CoreCompileInputs.cache
-C:\Users\Rodrigo\source\repos\TCE.Base\Repository\obj\Debug\TCE.Repository.csproj.CopyComplete
-C:\Users\Rodrigo\source\repos\TCE.Base\Repository\obj\Debug\TCE.Repository.dll
-C:\Users\Rodrigo\source\repos\TCE.Base\Repository\obj\Debug\TCE.Repository.pdb
+C:\Users\Rodrigo\source\repos\BASE TCE\TCE.Base\Repository\bin\Debug\TCE.Repository.dll.config
+C:\Users\Rodrigo\source\repos\BASE TCE\TCE.Base\Repository\bin\Debug\TCE.Repository.dll
+C:\Users\Rodrigo\source\repos\BASE TCE\TCE.Base\Repository\bin\Debug\TCE.Repository.pdb
+C:\Users\Rodrigo\source\repos\BASE TCE\TCE.Base\Repository\bin\Debug\Dapper.dll
+C:\Users\Rodrigo\source\repos\BASE TCE\TCE.Base\Repository\bin\Debug\EntityFramework.dll
+C:\Users\Rodrigo\source\repos\BASE TCE\TCE.Base\Repository\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Rodrigo\source\repos\BASE TCE\TCE.Base\Repository\bin\Debug\Dapper.xml
+C:\Users\Rodrigo\source\repos\BASE TCE\TCE.Base\Repository\bin\Debug\EntityFramework.xml
+C:\Users\Rodrigo\source\repos\BASE TCE\TCE.Base\Repository\obj\Debug\TCE.Repository.csprojAssemblyReference.cache
+C:\Users\Rodrigo\source\repos\BASE TCE\TCE.Base\Repository\obj\Debug\TCE.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Rodrigo\source\repos\BASE TCE\TCE.Base\Repository\obj\Debug\TCE.Repository.csproj.CopyComplete
+C:\Users\Rodrigo\source\repos\BASE TCE\TCE.Base\Repository\obj\Debug\TCE.Repository.dll
+C:\Users\Rodrigo\source\repos\BASE TCE\TCE.Base\Repository\obj\Debug\TCE.Repository.pdb

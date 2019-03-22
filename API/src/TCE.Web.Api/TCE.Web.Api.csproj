@@ -29,12 +29,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="TCE.AppLayerBase">
-      <HintPath>..\..\..\App\TCE.AppLayerBase\bin\Debug\TCE.AppLayerBase.dll</HintPath>
-    </Reference>
-    <Reference Include="TCE.CrossCutting.Dto">
-      <HintPath>..\..\..\CrossCutting\TCE.CrossCutting\bin\Debug\TCE.CrossCutting.Dto.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\..\..\APP\TCE.AppLayerBase\TCE.AppLayerBase.csproj" />
+    <ProjectReference Include="..\..\..\CrossCutting\TCE.CrossCutting\TCE.CrossCutting.Dto.csproj" />
   </ItemGroup>
 
 </Project>
