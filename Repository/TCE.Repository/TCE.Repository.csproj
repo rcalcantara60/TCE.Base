@@ -4,13 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{15BB49EA-3AA3-44A9-8D10-3015526F2B0C}</ProjectGuid>
+    <ProjectGuid>{4EE254C8-42F3-4B3C-937B-DA5835A185AD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TCE.Aop</RootNamespace>
-    <AssemblyName>TCE.Aop</AssemblyName>
+    <RootNamespace>TCE.Repository</RootNamespace>
+    <AssemblyName>TCE.Repository</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -31,45 +35,40 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
-      <HintPath>..\packages\Castle.Core.4.3.1\lib\net45\Castle.Core.dll</HintPath>
+    <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Dapper.1.60.1\lib\net451\Dapper.dll</HintPath>
     </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.3.7.1\lib\net45\nunit.framework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Oracle.ManagedDataAccess.18.6.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="TCE.CrossCutting.Dto">
-      <HintPath>..\CrossCutting\TCE.CrossCutting\bin\Debug\TCE.CrossCutting.Dto.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CacheInterceptor.cs" />
-    <Compile Include="CircuitBreakerInterceptor.cs" />
-    <Compile Include="Core\InterceptorBase.cs" />
-    <Compile Include="Core\InterceptorSelector.cs" />
-    <Compile Include="ExceptionPolicyInterceptor.cs" />
-    <Compile Include="MethodInvocationInterceptor.cs" />
-    <Compile Include="Metrics.cs" />
-    <Compile Include="MetricsInterceptor.cs" />
-    <Compile Include="PerfCounterInterceptor.cs" />
+    <Compile Include="Base\EFRepositoryBase.cs" />
+    <Compile Include="Base\MicroORMBaseRepository.cs" />
+    <Compile Include="Core\DbConnectionFactory.cs" />
+    <Compile Include="Interfaces\IContextManager.cs" />
+    <Compile Include="Interfaces\IDbConnectionFactory.cs" />
+    <Compile Include="Interfaces\IDbContext.cs" />
+    <Compile Include="Interfaces\IEFRepositoryBase.cs" />
+    <Compile Include="Interfaces\IMicroORMBaseRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ProxyFactory.cs" />
-    <Compile Include="SynchronizedInterceptor.cs" />
-    <Compile Include="TransactionInterceptor.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="TCE.Repository.nuspec" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

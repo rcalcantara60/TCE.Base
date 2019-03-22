@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-APP", "2-APP", "{1E95A8D5
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-API", "1-API", "{036BF878-6BB5-4374-BEBD-B48F0366032D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCE.Aop", "AOP\TCE.Aop.csproj", "{15BB49EA-3AA3-44A9-8D10-3015526F2B0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCE.Aop", "AOP\TCE.Aop\TCE.Aop.csproj", "{15BB49EA-3AA3-44A9-8D10-3015526F2B0C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TCE.Web.Api", "API\src\TCE.Web.Api\TCE.Web.Api.csproj", "{BB1836DD-CFDE-4815-92EB-2CE209E4A462}"
 EndProject
@@ -25,7 +25,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCE.CrossCutting.Dto", "Cro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCE.DomainLayerBase", "Domain\TCE.DomainLayerBase\TCE.DomainLayerBase.csproj", "{0B426BF9-CD88-4B1C-A231-BB37D161200A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCE.Repository", "Repository\TCE.Repository.csproj", "{4EE254C8-42F3-4B3C-937B-DA5835A185AD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCE.Repository", "Repository\TCE.Repository\TCE.Repository.csproj", "{4EE254C8-42F3-4B3C-937B-DA5835A185AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
