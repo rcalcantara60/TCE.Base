@@ -7,7 +7,7 @@ namespace TCE.DomainLayerBase.Entities
 {
     public abstract class EntityBase<TEntity> : IEntityBase<TEntity> where TEntity : class
     {
-        public long Id { get; set; }
+        //public long Id { get; set; }
         [NotMapped]
         public ValidationResult ValidationResult { get; set; }
         protected BaseValidator<TEntity> _validator;

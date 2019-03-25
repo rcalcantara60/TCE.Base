@@ -10,7 +10,7 @@ namespace TCE.CrossCutting.Dto
         public int ItemsPerPage { get; set; } = 10;
         public int TotalItems { get; set; }
         public int TotalPages { get; set; }
-        public string Order { get; set; } = "Id";
-        public string SortOrder { get; set; } = "asc";
+        public string Order { get; set; } = "";
+        public string SortOrder { get; set; } = "";
     }
 }

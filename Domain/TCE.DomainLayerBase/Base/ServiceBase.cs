@@ -85,7 +85,7 @@ namespace TCE.DomainLayerBase.Base
         public virtual IEnumerable<TEntity> All(bool @readonly = true)
         {
             var ret = _repository.All(@readonly);
-            var c = ret.FirstOrDefault();
+            var c = ret.ToList();
             return ret;
         }
 
