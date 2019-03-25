@@ -73,7 +73,7 @@
       <Project>{0b426bf9-cd88-4b1c-a231-bb37d161200a}</Project>
       <Name>TCE.DomainLayerBase</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Repository\TCE.Repository.csproj">
+    <ProjectReference Include="..\..\Repository\TCE.Repository\TCE.Repository.csproj">
       <Project>{4ee254c8-42f3-4b3c-937b-da5835a185ad}</Project>
       <Name>TCE.Repository</Name>
     </ProjectReference>

@@ -52,12 +52,6 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="TCE.CrossCutting.Dto">
-      <HintPath>..\..\CrossCutting\TCE.CrossCutting\bin\Debug\TCE.CrossCutting.Dto.dll</HintPath>
-    </Reference>
-    <Reference Include="TCE.Repository">
-      <HintPath>..\..\Repository\bin\Debug\TCE.Repository.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\HttpClientServiceBase.cs" />
@@ -76,7 +70,16 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\CrossCutting\TCE.CrossCutting\TCE.CrossCutting.Dto.csproj">
+      <Project>{0cc4df1b-f991-499e-bfee-1fa399fc47e4}</Project>
+      <Name>TCE.CrossCutting.Dto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Repository\TCE.Repository\TCE.Repository.csproj">
+      <Project>{4ee254c8-42f3-4b3c-937b-da5835a185ad}</Project>
+      <Name>TCE.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

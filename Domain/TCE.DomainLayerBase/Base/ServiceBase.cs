@@ -1,6 +1,7 @@
 ﻿using FluentValidation.Results;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using TCE.CrossCutting.Dto;
@@ -56,9 +57,9 @@ namespace TCE.DomainLayerBase.Base
             return _repository.GetSingle(predicate, @readonly);
         }
 
-        public virtual Task<TEntity> GetSingleAsync(Expression<Func<TEntity, bool>> predicate, bool @readonly = true)
+        public virtual async Task<TEntity> GetSingleAsync(Expression<Func<TEntity, bool>> predicate, bool @readonly = true)
         {
-            return _repository.GetSingleAsync(predicate, @readonly);
+            return await _repository.GetSingleAsync(predicate, @readonly);
         }
 
         public virtual TEntity GetSingle(Expression<Func<TEntity, bool>> predicate, params Expression<Func<TEntity, object>>[] includeProperties)
@@ -83,7 +84,9 @@ namespace TCE.DomainLayerBase.Base
 
         public virtual IEnumerable<TEntity> All(bool @readonly = true)
         {
-            return _repository.All(@readonly);
+            var ret = _repository.All(@readonly);
+            var c = ret.FirstOrDefault();
+            return ret;
         }
 
         public virtual IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate, bool @readonly = true)
