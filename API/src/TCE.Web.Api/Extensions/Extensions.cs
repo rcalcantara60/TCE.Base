@@ -10,9 +10,9 @@ namespace TCE.Web.Api.Extensions
     {
         public static void AddPagination(this HttpResponse response, PaginationDto pagination)
         {
-            var paginationHeader = new PaginationHeader(pagination.Page, pagination.ItemsPerPage, pagination.TotalItems, pagination.TotalPages, pagination.Order, pagination.SortOrder);
+            //var paginationHeader = new PaginationHeader(pagination.Page, pagination.PageSize, pagination.TotalItems, pagination.TotalPages, pagination.Order, pagination.SortOrder);
 
-            response.Headers.Add("Pagination", JsonConvert.SerializeObject(paginationHeader, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() }));
+            response.Headers.Add("Pagination", JsonConvert.SerializeObject(pagination, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() }));
             // CORS
             response.Headers.Add("access-control-expose-headers", "Pagination");
         }

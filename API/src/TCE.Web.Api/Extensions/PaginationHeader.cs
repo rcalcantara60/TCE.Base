@@ -1,7 +1,7 @@
 ﻿
 namespace TCE.Web.Api.Extensions
 {
-    public class PaginationHeader
+    public class PaginationHeader_
     {
         public int CurrentPage { get; set; }
         public int ItemsPerPage { get; set; }
@@ -10,7 +10,7 @@ namespace TCE.Web.Api.Extensions
         public string Order { get; set; }
         public string SortOrder { get; set; }
 
-        public PaginationHeader(int currentPage, int itemsPerPage, int totalItems, int totalPages, string order, string sortOrder)
+        public PaginationHeader_(int currentPage, int itemsPerPage, int totalItems, int totalPages, string order, string sortOrder)
         {
             this.CurrentPage = currentPage;
             this.ItemsPerPage = itemsPerPage;

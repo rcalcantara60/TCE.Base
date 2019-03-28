@@ -114,7 +114,7 @@ namespace TCE.AppLayerBase.Base
 
         private int GetTotalPages(PaginationDto pagination)
         {
-            return (int)Math.Ceiling((double)pagination.TotalItems / pagination.ItemsPerPage); ;
+            return (int)Math.Ceiling((double)pagination.TotalItems / pagination.PageSize); ;
         }
 
         public  virtual IEnumerable<TDto> All()
