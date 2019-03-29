@@ -139,6 +139,7 @@ namespace TCE.AppLayerBase.Base
 
         protected virtual IEnumerable<TDto> Paginate(IEnumerable<TEntity> entities, PaginationDto pagination, IEnumerable<DinamicQueryDto> queries = null)
         {
+            ValidaPaginacao(pagination);
             if (queries != null && queries.Count() > 0)
             {
                 var query = GetQuery(queries);
@@ -152,6 +153,20 @@ namespace TCE.AppLayerBase.Base
             }
             pagination.TotalPages = GetTotalPages(pagination);
             return GetListTDto(entities.ToList());
+        }
+
+        private void ValidaPaginacao(PaginationDto pagination)
+        {
+            if(pagination == null)
+                throw new Exception("O Header 'Pagination' é obrigatório para esta execução. {'Page':'0','PageSize':'0','Order':'FIELD','SortOrder':'ASC/DESC'}");
+            if (pagination.Page < 1)
+                throw new Exception("O campo 'Page' do Header 'Pagination' é obrigatório para esta execução e deve ser maior que 0 (zero). {'Page':'0','PageSize':'0','Order':'FIELD','SortOrder':'ASC/DESC'}");
+            if (pagination.PageSize < 1)
+                throw new Exception("O campo 'PageSize' do Header 'Pagination' é obrigatório para esta execução e deve ser maior que 0 (zero). {'Page':'0','PageSize':'0','Order':'FIELD','SortOrder':'ASC/DESC'}");
+            if (string.IsNullOrEmpty(pagination.Order))
+                throw new Exception("O campo 'Order' do Header 'Pagination' é obrigatório para esta execução. {'Page':'0','PageSize':'0','Order':'FIELD','SortOrder':'ASC/DESC'}");
+            if (string.IsNullOrEmpty(pagination.Order))
+                throw new Exception("O campo 'SortOrder' do Header 'Pagination' é obrigatório para esta execução. {'Page':'0','PageSize':'0','Order':'FIELD','SortOrder':'ASC/DESC'}");
         }
     }
 }

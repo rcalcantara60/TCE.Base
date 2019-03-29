@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Extensions\PaginationHeader.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="App.config" />
     <None Update="wwwroot;web.config">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
