@@ -1,4 +1,4 @@
-﻿using FluentValidation.Results;
+﻿using FluentValidation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +13,7 @@ namespace TCE.DomainLayerBase.Base
     public class ServiceBase<TEntity> : IServiceBase<TEntity> where TEntity : class
     {
         protected readonly IEFRepositoryBase<TEntity> _repository;
+        protected readonly IValidator<TEntity> _validator;
         private readonly IMicroORMBaseRepository<TEntity> _repositoryMicroOrm;
         private readonly ValidationResultDto _validationResult;
 
@@ -31,8 +32,11 @@ namespace TCE.DomainLayerBase.Base
             get { return _validationResult; }
         }        
 
-        public ServiceBase(IEFRepositoryBase<TEntity> repository, IMicroORMBaseRepository<TEntity> repositoryMicroOrm)
+        public ServiceBase(IEFRepositoryBase<TEntity> repository, 
+                           IMicroORMBaseRepository<TEntity> repositoryMicroOrm,
+                           IValidator<TEntity> v)
         {
+            _validator = v;
             _repository = repository;
             _repositoryMicroOrm = repositoryMicroOrm;
             _validationResult = new ValidationResultDto() { IsValid = true };
@@ -142,11 +146,11 @@ namespace TCE.DomainLayerBase.Base
         #endregion
 
         #region CRUD Methods
-
+        
         public virtual ValidationResultDto Add(TEntity entity)
         {
             var selfValidationEntity = entity as ISelfValidation<TEntity>;
-
+            selfValidationEntity.SetValidator(_validator);
             if (selfValidationEntity != null && !selfValidationEntity.IsValidToAdd(this))
             {
                 return AutoMapperHelper.GetValidationResultDto(selfValidationEntity.ValidationResult);
@@ -158,6 +162,7 @@ namespace TCE.DomainLayerBase.Base
         public virtual async Task<ValidationResultDto> AddAsync(TEntity entity)
         {
             var selfValidationEntity = entity as ISelfValidation<TEntity>;
+            selfValidationEntity.SetValidator(_validator);
             if (selfValidationEntity != null && !selfValidationEntity.IsValidToAdd(this))
             {
                 return AutoMapperHelper.GetValidationResultDto(selfValidationEntity.ValidationResult);
@@ -169,6 +174,7 @@ namespace TCE.DomainLayerBase.Base
         public virtual ValidationResultDto Update(TEntity entity)
         {
             var selfValidationEntity = entity as ISelfValidation<TEntity>;
+            selfValidationEntity.SetValidator(_validator);
             if (selfValidationEntity != null && !selfValidationEntity.IsValidToUpdade(this))
             {
                 return AutoMapperHelper.GetValidationResultDto(selfValidationEntity.ValidationResult);
@@ -180,6 +186,7 @@ namespace TCE.DomainLayerBase.Base
         public virtual async Task<ValidationResultDto> UpdateAsync(TEntity entity)
         {
             var selfValidationEntity = entity as ISelfValidation<TEntity>;
+            selfValidationEntity.SetValidator(_validator);
             if (selfValidationEntity != null && !selfValidationEntity.IsValidToAdd(this))
             {
                 return AutoMapperHelper.GetValidationResultDto(selfValidationEntity.ValidationResult);
