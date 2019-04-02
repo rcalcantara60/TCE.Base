@@ -151,7 +151,7 @@ namespace TCE.DomainLayerBase.Base
         {
             var selfValidationEntity = entity as ISelfValidation<TEntity>;
             selfValidationEntity.SetValidator(_validator);
-            if (selfValidationEntity != null && !selfValidationEntity.IsValidToAdd(this))
+            if (selfValidationEntity != null && !selfValidationEntity.IsValidToAdd())
             {
                 return AutoMapperHelper.GetValidationResultDto(selfValidationEntity.ValidationResult);
             }
@@ -163,7 +163,7 @@ namespace TCE.DomainLayerBase.Base
         {
             var selfValidationEntity = entity as ISelfValidation<TEntity>;
             selfValidationEntity.SetValidator(_validator);
-            if (selfValidationEntity != null && !selfValidationEntity.IsValidToAdd(this))
+            if (selfValidationEntity != null && !selfValidationEntity.IsValidToAdd())
             {
                 return AutoMapperHelper.GetValidationResultDto(selfValidationEntity.ValidationResult);
             }
@@ -175,7 +175,7 @@ namespace TCE.DomainLayerBase.Base
         {
             var selfValidationEntity = entity as ISelfValidation<TEntity>;
             selfValidationEntity.SetValidator(_validator);
-            if (selfValidationEntity != null && !selfValidationEntity.IsValidToUpdade(this))
+            if (selfValidationEntity != null && !selfValidationEntity.IsValidToUpdade())
             {
                 return AutoMapperHelper.GetValidationResultDto(selfValidationEntity.ValidationResult);
             }
@@ -187,7 +187,7 @@ namespace TCE.DomainLayerBase.Base
         {
             var selfValidationEntity = entity as ISelfValidation<TEntity>;
             selfValidationEntity.SetValidator(_validator);
-            if (selfValidationEntity != null && !selfValidationEntity.IsValidToAdd(this))
+            if (selfValidationEntity != null && !selfValidationEntity.IsValidToAdd())
             {
                 return AutoMapperHelper.GetValidationResultDto(selfValidationEntity.ValidationResult);
             }

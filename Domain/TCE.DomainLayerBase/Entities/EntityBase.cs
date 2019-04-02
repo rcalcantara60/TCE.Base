@@ -20,9 +20,9 @@ namespace TCE.DomainLayerBase.Entities
         {
             
         }
-        public abstract void SetValidator(IValidator<TEntity> v);
-        public abstract bool IsValidToAdd(IServiceBase<TEntity> service);
-        public abstract bool IsValidToUpdade(IServiceBase<TEntity> service);
-        public abstract bool IsValidToDelete(IServiceBase<TEntity> service);
+        public abstract void SetValidator(IValidator<TEntity> validator);
+        public abstract bool IsValidToAdd();
+        public abstract bool IsValidToUpdade();
+        public abstract bool IsValidToDelete();
     }
 }

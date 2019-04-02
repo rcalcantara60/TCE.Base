@@ -10,12 +10,12 @@ namespace TCE.DomainLayerBase.Validator
     {
         ValidationResult ValidationResult { get; }
 
-        void SetValidator(IValidator<T> v);
+        void SetValidator(IValidator<T> validator);
 
-        bool IsValidToAdd(IServiceBase<T> service);
+        bool IsValidToAdd();
 
-        bool IsValidToUpdade(IServiceBase<T> service);
+        bool IsValidToUpdade();
 
-        bool IsValidToDelete(IServiceBase<T> service);
+        bool IsValidToDelete();
     }
 }
