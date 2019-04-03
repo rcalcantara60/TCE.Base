@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>TCE.RestClient</AssemblyName>
+    <RootNamespace>TCE.RestClient</RootNamespace>
+    <Authors>Piter Oliveira, Diego Browen</Authors>
+    <Company>Tribunal de Contas do Estado de Minas Gerais</Company>
+    <Version>1.0.1</Version>
+    <Description>Serviço para acessos externos via rest</Description>
+    <AssemblyVersion>1.0.1.1</AssemblyVersion>
+  </PropertyGroup>
+ 
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+  </ItemGroup>
+
+</Project>
